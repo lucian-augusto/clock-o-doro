@@ -1,0 +1,150 @@
+body {
+  text-align: center;
+  background-color: #4d0111;
+}
+
+.box {
+  background: #fbefda;
+  border-radius: .5rem;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-lg {
+  margin: 0% 2%;
+  padding: 0.8rem 5rem;
+}
+
+.btn-outline-danger {
+  color: #930019;
+  border-color: #930019;
+}
+
+.btn-outline-danger:focus, .btn-outline-danger:active, .btn-outline-danger:hover {
+  color: #fbefda;
+  border-color: #930019;
+  background-color: #930019;
+}
+
+.btn-outline-secondary {
+  color: #70655e;
+  border-color: #70655e;
+}
+
+.btn-outline-secondary:focus, .btn-outline-secondary:active, .btn-outline-secondary:hover {
+  color: #fbefda;
+  border-color: #70655e;
+  background-color: #70655e;
+}
+
+.clock {
+  color: #930019;
+  font-size: 12rem;
+}
+
+.clock-div {
+  background-color: #cc9759;
+  width: 70%;
+  padding: 1.5% 0%;
+  border-radius: .5rem;
+}
+
+.copyright {
+  color: #fbefda;
+  font-size: .75rem;
+}
+
+form {
+  text-align: center;
+  margin-left: 20px;
+}
+
+#heading {
+  background-color: #cc9759;
+  text-align: center;
+  border-top-radius: .5rem;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #cc9759;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #cc9759;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.navbar {
+  padding: 1.0rem 2.8rem;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #4d0111;
+}
+
+.round-text {
+  color: #4d0111;
+}
+
+.submit-btn {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #cc9759;
+  color: #fbefda;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+.submit-btn:focus, .submit-btn:active, .submit-btn:hover {
+  color: #cc9759;
+  background-color: #fbefda;
+}
+
+.title {
+  color: #fbefda;
+  padding: 20px;
+}
+
+.todo-div {
+  max-width: 400px;
+  margin: 5% auto;
+  width: 50%;
+  border-radius: .5rem;
+}
+
+.white-text {
+  color: #fbefda;
+}

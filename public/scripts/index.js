@@ -96,7 +96,7 @@ function timerCount() { // Function that executes the timer
   updateClock();
 }
 
-function updateClock() { // Function that updates the clock on the page
+function updateClock() { // Function that
   const minuteClockText = ("0" + minutes).slice(-2);
   const secondClockText = ("0" + seconds).slice(-2);
 

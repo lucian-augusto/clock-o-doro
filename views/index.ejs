@@ -77,15 +77,41 @@
       <button class="btn btn-outline-danger btn-lg" id="reset"><i class="fas fa-stop" id="stop-icon"></i> Reset</button>
     </div>
   </section>
+
+  <!-- Todo List Section -->
+  <section>
+    <div class="todo-div">
+      <div class="box" id="heading">
+        <h1>Todo List</h1>
+      </div>
+
+      <div class="box">
+        <%for(var k = 0; k < newListItem.length; k++){%>
+        <div class="item">
+          <input type="checkbox">
+          <p><%=newListItem[k]%></p>
+        </div>
+
+        <%}%>
+
+        <form class="item" action="/" method="post">
+          <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+          <button class="submit-btn" type="submit" name="button" value="Todo List">+</button>
+
+        </form>
+      </div>
+    </div>
+
+  </section>
 </body>
 
 <footer>
-
+  <p class="copyright">© Lucian Augusto 2019</p>
   <!-- Linking JQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- Adding the local JS scritps -->
-  <script src="index.js"></script>
+  <script src="scripts/index.js"></script>
 </footer>
 
 </html>
