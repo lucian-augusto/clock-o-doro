@@ -1,3 +1,6 @@
+# Gitingore file
+.gitignore
+
 # Config files
 .vscode/
 
