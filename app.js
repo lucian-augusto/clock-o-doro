@@ -1,5 +1,8 @@
 // jshint esversion:6
 
+// Setting PORT
+const port = process.env.PORT || 3000;
+
 // Requiring Packages
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -28,6 +31,6 @@ app.post('/', function(req, res) {
 });
 
 // Setting up Listening Port
-app.listen(process.env.PORT || 3000, function() {
-  console.log('Server running on port 3000.');
+app.listen(port, function() {
+  console.log('Server running on port ' + port + '.');
 });

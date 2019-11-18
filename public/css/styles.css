@@ -38,7 +38,7 @@ body {
 
 .clock {
   color: #930019;
-  font-size: 12rem;
+  font-size: 13.33vw;
 }
 
 .clock-div {
@@ -147,4 +147,15 @@ p {
 
 .white-text {
   color: #fbefda;
+}
+
+/* Media Query */
+@media (max-width: 800px){
+  .item-form {
+    display: block;
+  }
+
+  input[type="text"] {
+    width: 48%;
+  }
 }
