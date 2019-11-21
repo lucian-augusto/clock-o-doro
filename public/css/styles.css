@@ -61,7 +61,6 @@ form {
 #heading {
   background-color: #cc9759;
   text-align: center;
-  border-top-radius: .5rem;
 }
 
 input:checked+p {

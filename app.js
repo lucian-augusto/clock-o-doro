@@ -18,17 +18,21 @@ app.set('view engine', 'ejs');
 // Declaring global variables/constants
 const items = [];
 
-// Setting up 'home' get route
-app.get('/', function(req, res) {
-  res.render('index', {
-    newListItem: items
-  });
-});
+// Setting up 'home' route
+app.route('/')
 
-app.post('/', function(req, res) {
-  items.push(req.body.newItem);
-  res.redirect('/');
-});
+  // Setting up get request
+  .get(function(req, res) {
+    res.render('index', {
+      newListItem: items
+    });
+  })
+
+  // Setting up post request
+  .post(function(req, res) {
+    items.push(req.body.item);
+    res.redirect('/');
+  });
 
 // Setting up Listening Port
 app.listen(port, function() {
