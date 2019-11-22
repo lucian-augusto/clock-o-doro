@@ -86,8 +86,15 @@
       </div>
 
       <div id="itemBox" class="box">
+        <%for(var k = 0; k < newListItem.length; k++){%>
+        <div class="item">
+          <input type="checkbox">
+          <p><%=newListItem[k]%></p>
+        </div>
 
-        <form id="itemFormClient" class="item item-form" action="/" method="post">
+        <%}%>
+
+        <form id="itemForm" class="item item-form" action="/" method="post">
           <input id="newItem" type="text" name="newItem" placeholder="New Item" autocomplete="off">
           <button class="submit-btn" type="submit" name="button" value="Todo List">+</button>
 
@@ -105,7 +112,7 @@
 
   <!-- Adding the local JS scritps -->
   <script src="scripts/timer.js"></script>
-  <script src="scripts/todo.js"></script>
+  <script src="scripts/todoPost.js"></script>
 </footer>
 
 </html>
