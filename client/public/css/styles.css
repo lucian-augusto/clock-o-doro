@@ -53,6 +53,23 @@ body {
   font-size: .75rem;
 }
 
+.delete-btn {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #fbefda;
+  color: #4d0111;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+.delete-btn:focus, .delete-btn:active, .delete-btn:hover {
+  color: #fbefda;
+  background-color: #4d0111;
+}
+
 form {
   text-align: center;
   margin-left: 20px;

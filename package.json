@@ -4,7 +4,11 @@
   "description": "simple pomodoro technique web app",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "client": "cd client && npm start",
+    "server": "nodemon app.js",
+    "dev": "cd client && npm build && cd .. && npm start",
+    "start": "node app.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "Lucian Augusto",
   "license": "ISC",
@@ -14,5 +18,17 @@
     "express": "^4.17.1",
     "mongoose": "^5.7.12"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
