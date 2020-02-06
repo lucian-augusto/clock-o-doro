@@ -6,35 +6,25 @@ const port = process.env.PORT || 3001;
 // Requiring Packages
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 // Setting Up App constants
 const app = express();
-app.use(express.static(__dirname + '/public'));
-// app.use(express.static(__dirname + '/src'));
+
 app.use(bodyParser.urlencoded({
   extended: true
 }));
-// app.set('view engine', 'ejs');
+
+// Serve the static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Declaring global variables/constants
-const items = [];
+// const items = [];
 
-// Setting up 'home' route
-app.route('/')
-
-  // Setting up get request
-  .get(function(req, res) {
-    // res.render('index', {
-    //   newListItem: items
-    // });
-    res.sendFile('index.html');
-  })
-
-  // Setting up post request
-  .post(function(req, res) {
-    items.push(req.body.item);
-    res.redirect('/');
-  });
+// Handle React routing, return all requests to React app
+app.get('*', (req,res) =>{
+	res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
 
 // Setting up Listening Port
 app.listen(port, function() {
