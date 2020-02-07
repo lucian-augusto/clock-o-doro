@@ -12,14 +12,15 @@ function TodoItem(props) {
 
     function handleDeleteClick() { // Function that calls a component prop that calls a function from the parent component using
         // the item's id prop as an input
+        setIsChecked(false);
         props.onDelete(props.id);
     }
 
     return (
-        <div class="item">
+        <div className="item">
             {isChecked && <button onClick={handleDeleteClick} className="delete-btn"><DeleteIcon /></button>} {/* Only renders
             the delete button if the checkbox is active */}
-            <input type="checkbox" onClick={handleCheckbox}/>
+            <input type="checkbox" onChange={handleCheckbox} checked={isChecked}/>
             <p>{props.text}</p>  
         </div>
     );

@@ -18,9 +18,9 @@ function InputForm(props) {
 
     return(
         <div>
-        <form id="itemFormClient" onSubmit={handleSubmit} class="item item-form" action="/" method="post">
-            <input id="newItem" onChange={handleChange} type="text" value={text} name="newItem" placeholder="New Item" autocomplete="off"/>
-            <button class="submit-btn" type="submit" name="button" value="Todo List">+</button>
+        <form id="itemFormClient" onSubmit={handleSubmit} className="item item-form" action="/" method="post">
+            <input id="newItem" onChange={handleChange} type="text" value={text} name="newItem" placeholder="New Item" autoComplete="off"/>
+            <button className="submit-btn" type="submit" name="button" value="Todo List">+</button>
         </form>
         </div>
     );

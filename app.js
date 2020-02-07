@@ -1,5 +1,3 @@
-// jshint esversion:6
-
 // Setting PORT
 const port = process.env.PORT || 3001;
 
@@ -10,7 +8,6 @@ const path = require('path');
 
 // Setting Up App constants
 const app = express();
-
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -18,8 +15,6 @@ app.use(bodyParser.urlencoded({
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-// Declaring global variables/constants
-// const items = [];
 
 // Handle React routing, return all requests to React app
 app.get('*', (req,res) =>{
@@ -27,6 +22,6 @@ app.get('*', (req,res) =>{
 });
 
 // Setting up Listening Port
-app.listen(port, function() {
-  console.log('Server running on port ' + port + '.');
+app.listen(port, () => {
+  console.log(`Server running on port ${port}.`);
 });

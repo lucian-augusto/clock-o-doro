@@ -22,12 +22,12 @@ function TodoList() {
     }
 
     return (
-        <div class="todo-div">
-            <div class="box" id="heading">
+        <div className="todo-div">
+            <div className="box" id="heading">
                 <h1>Todo List</h1>
             </div>
 
-            <div id="itemBox" class="box">
+            <div id="itemBox" className="box">
                 {items.map((item, index) => (
                     <TodoItem 
                         key={index}

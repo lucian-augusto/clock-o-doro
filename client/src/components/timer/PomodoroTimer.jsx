@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ResetButton from './ResetButton';
 import StartButton from './StartButton';
 import TimerText from './TimerText';
+import alertSoundFile from '../sounds/alertSound.mp3';
 
 function PomodoroTimer() {
     // Global Constants/Variables
@@ -81,9 +82,9 @@ function PomodoroTimer() {
         setTimer(prevValue => clearInterval(prevValue));
     }
 
-    function playAudio(fileName) { // Function that plays a sound whenever the timer transitions from a work time to a break
+    function playAudio() { // Function that plays a sound whenever the timer transitions from a work time to a break
         // time of vice versa
-        const audio = new Audio(__dirname + '/public/sounds/' + fileName + '.mp3');
+        const audio = new Audio(alertSoundFile);
         audio.play();
     }
 
@@ -117,7 +118,7 @@ function PomodoroTimer() {
             if (newValue.seconds <= 0) {
                 if (newValue.minutes === 0) {
                     setTimer(prevValue => clearInterval(prevValue));
-                    playAudio('alerSound');
+                    playAudio();
                     setTimeout(nextRound, 300);
                 } else {
                     newValue.minutes = newValue.minutes - 1;
